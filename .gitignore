@@ -10,6 +10,7 @@ __pycache__/
 env/
 venv/
 ENV/
+.venv_safeguarding/
 
 # Jupyter notebooks checkpoints
 .ipynb_checkpoints/
@@ -26,3 +27,6 @@ Thumbs.db
 
 # Excel temp files
 *.xlsx~
+
+# OS files
+.DS_Store
