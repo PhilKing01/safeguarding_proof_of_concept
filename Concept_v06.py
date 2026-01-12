@@ -11,7 +11,19 @@ import plotly.graph_objects as go
 # -----------------------------
 # Excel file path
 # -----------------------------
-EXCEL_FILE = "/home/king/projects/Safeguarding_POC/Data/Safeguarding specification v0.1 2025_12_19_PK.xlsx"
+
+# Robust path to Excel file
+EXCEL_FILE = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),  # folder where this script lives
+    "Data",
+    "Safeguarding specification v0.1 2025_12_19_PK.xlsx"
+)
+
+# Optional: debug output to see if file exists
+if not os.path.exists(EXCEL_FILE):
+    st.error(f"File not found: {EXCEL_FILE}")
+else:
+    st.write(f"Using Excel file: {EXCEL_FILE}")
 
 
 # -----------------------------
